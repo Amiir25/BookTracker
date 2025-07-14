@@ -3,7 +3,7 @@ import React from "react";
 const AddBook = () => {
     return (
         <>
-            <form action="" className="px-6 flex-1">
+            <form action="" className="px-6 flex-1 mt-10">
                 <h1 className="text-2xl text-[#023766] font-medium mb-6">
                     Add New Book
                 </h1>
@@ -47,21 +47,15 @@ const AddBook = () => {
                             <option value="Research"></option>
                         </datalist>
                     </div>
-                    {/* Finishing date */}
+                    {/* Status */}
                     <div className="flex flex-col">
-                        <label htmlFor="genreInput">Finish in . . .</label>
-                        <input type="text" id="genreInput" list="finish" placeholder="Days to finish this book"
+                        <label htmlFor="statusInput">Status</label>
+                        <input type="text" id="statusInput" list="status" placeholder="Status"
                             className="border border-gray-400 px-2 py-2 rounded" />
-                        <datalist id="finish">
-                            <option value="5 days"></option>
-                            <option value="10 days"></option>
-                            <option value="15 days"></option>
-                            <option value="20 days"></option>
-                            <option value="25 days"></option>
-                            <option value="1 month"></option>
-                            <option value="1/2 month"></option>
-                            <option value="2 months"></option>
-                            <option value="Not sure"></option>
+                        <datalist id="status">
+                            <option value="Not Started"></option>
+                            <option value="Reading . . ."></option>
+                            <option value="Finished"></option>
                         </datalist>
                     </div>
                     {/* Button */}
