@@ -7,7 +7,7 @@ const AddBook = () => {
                 <h1 className="text-2xl text-[#023766] font-medium mb-6">
                     Add New Book
                 </h1>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                     {/* Title */}
                     <div className="flex flex-col">
@@ -39,12 +39,10 @@ const AddBook = () => {
                         <input type="text" id="genreInput" list="genre" placeholder="Enter the genre"
                             className="border border-gray-400 px-2 py-2 rounded" />
                         <datalist id="genre">
+                            <option value="Tech"></option>
                             <option value="Biography"></option>
-                            <option value="History"></option>
                             <option value="Science"></option>
-                            <option value="Poetry"></option>
                             <option value="Self-help"></option>
-                            <option value="Research"></option>
                         </datalist>
                     </div>
                     {/* Status */}
@@ -58,12 +56,19 @@ const AddBook = () => {
                             <option value="Finished"></option>
                         </datalist>
                     </div>
-                    {/* Button */}
-                    <button className="py-2 mt-8 border-4 border-[#023766] text-gray-800 text-xl font-medium
-                    hover:bg-[#023766] hover:text-gray-300 transition-all duration-300">
-                        Add
-                    </button>
+                    {/* Current Page */}
+                    <div className="flex flex-col">
+                        <label htmlFor="currentPage">Current Page</label>
+                        <input type="number" id="currentPage" placeholder="Enter your current pages"
+                            className="border border-gray-400 px-2 py-2 rounded" />
+                    </div>
                 </div>
+
+                {/* Button */}
+                <button className="py-2 mt-8 w-1/3 border-4 border-[#023766] text-gray-800 text-xl font-medium
+                    hover:bg-[#023766] hover:text-gray-300 transition-all duration-300">
+                    Add
+                </button>
             </form>
         </>
     )
