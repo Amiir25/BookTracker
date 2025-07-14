@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='flex items-center justify-between sticky bg-white top-0 py-1 border-b border-b-[#023766] text-[#023766]'>
+      <nav className='flex items-center justify-between py-1 border-b border-b-[#023766] text-[#023766]'>
 
         <div className='flex items-center gap-4 w-1/6 px-6' >
 
