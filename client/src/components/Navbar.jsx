@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='flex items-center justify-between sticky top-0 py-1 px-6 md:px-12 lg:px-24 xl:px-32 border-b border-b-[#023766] text-[#023766]'>
+      <nav className='flex items-center justify-between sticky bg-white top-0 py-1 border-b border-b-[#023766] text-[#023766]'>
 
         <div className='flex items-center gap-4 w-1/6 px-6' >
 
@@ -26,22 +26,22 @@ const Navbar = () => {
 
           {/* Logo */}
           <Link to={"/"} className='flex flex-col items-center'>
-            <img src={assets.logo} alt="" className='w-12' />
-            <p className='text-xs  font-black'>ReadingTracker</p>
+            <img src={assets.logo} alt="" className='w-20' />
+            <p className='text-sm  font-black'>BookTracker</p>
           </Link>
         </div>
 
         {/* Nav items */}
         <div className='hidden md:flex items-center gap-8'>
           
-          <Link to={"/dashboard"} className='p-2 rounded-lg text-gray-100 bg-[#023766] font-medium 
+          {/* <Link to={"/dashboard"} className='p-2 rounded-lg text-gray-100 bg-[#023766] font-medium 
           hover:bg-[#020046]'>
             Dashboard
-          </Link>
+          </Link> */}
 
           {
             navLinks.map((link, i) => (
-              <a href={link.path} className='font-medium hover:text-[#020046]'>
+              <a key={i} href={link.path} className='font-medium hover:text-[#020046]'>
                 {link.name}
               </a>
             ))
@@ -50,10 +50,10 @@ const Navbar = () => {
         </div>
 
         {/* Login / Logout */}
-        <div className='flex items-center gap-1'>
+        {/* <div className='flex items-center gap-1'>
           <img src={assets.userAvatar} alt="User Image" className='w-12' />
           <p className='font-medium'>Logout</p>
-        </div>
+        </div> */}
 
         {/* Mobile Menu */}
         <div className={`backdrop-blur-sm bg-[#023766]/80 text-gray-200 fixed top-0 left-0 w-1/2 h-screen flex flex-col items-center gap-6
