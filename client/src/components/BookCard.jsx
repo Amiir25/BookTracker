@@ -12,11 +12,13 @@ const BookCard = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
                     {
                         books.map((book) => (
-                            <div key={book.id} className="flex items-start gap-10 mx-2 px-2 py-4 border border-gray-300 rounded shadow-lg">
+                            <div key={book.id} className="relative flex items-start gap-12 mx-2 px-2 py-6 border border-gray-300 rounded shadow-lg">
 
                                 {/* Left */}
                                 <div className="flex-1">
-                                    <h1 className="text-[#023766] text-2xl md:text-3xl font-bold">{book.title}</h1>
+                                    <h1 className="relative text-[#023766] text-2xl md:text-3xl font-bold">
+                                        {book.title}
+                                    </h1>
                                     <div className="flex items-baseline gap-2 mb-4">
                                         <p className="text-xl font-medium">{book.author}</p>
                                         <span className='font-medium text-xs'>{book.year}</span>
@@ -27,6 +29,9 @@ const BookCard = () => {
                                         <button className="border border-red-600 p-1 rounded hover:bg-red-600 hover:text-gray-200">Delete</button>
                                     </div>
                                 </div>
+
+                                {/* Genre */}
+                                <span className="absolute top-0 right-0 text-[10px] bg-[#023766] text-white p-1">{book.genre}</span>
 
                                 {/* Right */}
                                 <div className={`py-1 px-2 rounded`}>
