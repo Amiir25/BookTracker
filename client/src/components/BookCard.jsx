@@ -20,7 +20,7 @@ const BookCard = ({onDelete}) => {
 
     return (
         <>
-            <div className="mt-10">
+            <div className="mt-14">
 
                 {/* Books */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -30,11 +30,11 @@ const BookCard = ({onDelete}) => {
 
                                 {/* Left */}
                                 <div className="flex-1">
-                                    <h1 className="relative text-[#023766] text-2xl md:text-3xl font-bold line-clamp-2">
+                                    <h1 className="relative text-gray-600 text-2xl md:text-3xl font-bold line-clamp-2">
                                         {book.title}
                                     </h1>
                                     <div className="flex items-baseline gap-4 mb-4">
-                                        <p className="font-medium">{book.author}</p>
+                                        <p className="text-sm font-medium">{book.author}</p>
                                         <span className='font-light text-xs'>{book.date}</span>
                                     </div>
                                     <p>{book.totalpage} pages</p>
@@ -59,7 +59,7 @@ const BookCard = ({onDelete}) => {
                                     <p
                                     className={`${book.status === 'Not Started' && 'bg-blue-300'}
                                     ${book.status === 'Reading' && 'bg-amber-300'}
-                                    ${book.status === 'Finished' && 'bg-green-300'} py-1 px-2 rounded`}>
+                                    ${book.status === 'Finished' && 'bg-green-300'} text-sm py-1 px-2 rounded`}>
                                         {book.status}
                                     </p>
                                     {
