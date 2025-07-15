@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const BookCard = () => {
+const BookCard = ({onDelete}) => {
 
     const [books, setBooks] = useState([]);
 
@@ -30,7 +30,7 @@ const BookCard = () => {
 
                                 {/* Left */}
                                 <div className="flex-1">
-                                    <h1 className="relative text-[#023766] text-2xl md:text-3xl font-bold">
+                                    <h1 className="relative text-[#023766] text-2xl md:text-3xl font-bold line-clamp-2">
                                         {book.title}
                                     </h1>
                                     <div className="flex items-baseline gap-4 mb-4">
@@ -39,8 +39,15 @@ const BookCard = () => {
                                     </div>
                                     <p>{book.totalpage} pages</p>
                                     <div className="flex items-center gap-4 w-full mt-3 text-gray-700 text-sm">
-                                        <button className="border border-[#023766] p-1 rounded hover:bg-[#023776] hover:text-gray-200">Update</button>
-                                        <button className="border border-red-600 p-1 rounded hover:bg-red-600 hover:text-gray-200">Delete</button>
+                                        <button className="border border-[#023766] p-1 rounded hover:bg-[#023776] hover:text-gray-200">
+                                            <Link to={`/update/${book.id}`}>Update</Link>
+                                        </button>
+                                        <button 
+                                        onClick={() => onDelete(book.id)}
+                                        className="border border-red-600 p-1 rounded hover:bg-red-600 hover:text-gray-200
+                                        transition-all duration-200 ">
+                                            Delete
+                                        </button>
                                     </div>
                                 </div>
 
