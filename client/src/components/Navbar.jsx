@@ -21,8 +21,8 @@ const Navbar = () => {
         <div className='flex items-center gap-4 w-1/6 px-6' >
 
           {/* Menu icon */}
-          <FontAwesomeIcon icon={faBars} size='xl' className='md:!hidden'
-            onClick={() => setMobileMenu(!mobileMenu)} />
+          {/* <FontAwesomeIcon icon={faBars} size='xl' className='md:!hidden'
+            onClick={() => setMobileMenu(!mobileMenu)} /> */}
 
           {/* Logo */}
           <Link to={"/"} className='flex flex-col items-center'>
@@ -39,13 +39,13 @@ const Navbar = () => {
             Dashboard
           </Link> */}
 
-          {
+          {/* {
             navLinks.map((link, i) => (
               <a key={i} href={link.path} className='font-medium hover:text-[#020046]'>
                 {link.name}
               </a>
             ))
-          }
+          } */}
 
         </div>
 
@@ -64,7 +64,7 @@ const Navbar = () => {
             onClick={() => setMobileMenu(!mobileMenu)} />
 
           {/* Mobile menu items */}
-          <Link to={"/books"} className='p-2 rounded-lg text-gray-100 bg-[#023766] font-medium hover:opacity-80'
+          {/* <Link to={"/books"} className='p-2 rounded-lg text-gray-100 bg-[#023766] font-medium hover:opacity-80'
           >
             Dashboard
           </Link>
@@ -79,7 +79,7 @@ const Navbar = () => {
           <Link to={"/reviews"} className='font-medium hover:opacity-80'
             onClick={() => (setMobileMenu(!mobileMenu))}>
             Reviews
-          </Link>
+          </Link> */}
         </div>
 
       </nav>
