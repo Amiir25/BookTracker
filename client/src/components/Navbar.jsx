@@ -3,6 +3,7 @@ import { assets } from '../assets/assets'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
+import mainLogo from '../assets/mainLogo.png';
 
 const Navbar = () => {
 
@@ -16,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='flex items-center justify-between py-1 border-b border-b-[#023766] text-[#023766]'>
+      <nav className='flex items-center justify-between py-1 border-b border-b-[#023766]'>
 
         <div className='flex items-center gap-4 w-1/6 px-6' >
 
@@ -25,8 +26,8 @@ const Navbar = () => {
             onClick={() => setMobileMenu(!mobileMenu)} /> */}
 
           {/* Logo */}
-          <Link to={"/"} className='flex flex-col items-center'>
-            <img src={assets.logo} alt="" className='w-20' />
+          <Link to={"/"} className='flex flex-col items-center text-[#004155]'>
+            <img src={mainLogo} alt="" className='w-20' />
             <p className='text-sm  font-black'>BookTracker</p>
           </Link>
         </div>
