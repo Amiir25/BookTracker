@@ -26,8 +26,8 @@ const AddBook = () => {
         e.preventDefault();
         try {
             await axios.post("http://localhost:5000/books", input);
-            // navigate('/');
-            console.log(input);
+            navigate('/');
+            alert("Book added successfully");
         } catch (err) {
             console.error(err);
         }
