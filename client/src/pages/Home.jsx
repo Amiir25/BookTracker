@@ -27,9 +27,9 @@ const Home = () => {
 
     return (
         <>
-            <div className="flex flex-col items-center mt-10">
-                <h1 className="text-2xl md:text-4xl font-bold">Book Tracker</h1>
-                <p className="md:text-xl font-serif">Track what you read, finish what you start</p>
+            <div className="flex flex-col items-center mt-10 text-[#004155]">
+                <h1 className="text-2xl md:text-5xl font-bold">My Book Tracker</h1>
+                <p className="md:text-xl font-mono mt-2">"Track what you read, finish what you start"</p>
 
                 {/* Book Card */}
                 <BookCard 
